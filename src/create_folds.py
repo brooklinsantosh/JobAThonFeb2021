@@ -95,7 +95,7 @@ class CreateFolds:
             
             #Creating folds
             kf = StratifiedKFold(n_splits=self.num_folds)
-            for fold, (t_, v_) in enumerate(kf.split(X=self.dataframe, y= targets)):
+            for fold, (_, v_) in enumerate(kf.split(X=self.dataframe, y= targets)):
                 self.dataframe.loc[v_, 'kfold'] = fold
         
         #For holdout splits
