@@ -1,9 +1,14 @@
 import os
 
+#Run the .py files from the main directory not from src directory
+#Input paths
+TRAINING_DATA = os.path.join(os.getcwd(), "input\\train.csv")
+TRAINING_FOLD_DATA = os.path.join(os.getcwd(), "input\\train_folds.csv")
+TEST_DATA = os.path.join(os.getcwd(), "input\\test.csv")
 
-
-TRAINING_DATA = os.path.join(os.getcwd(), "input\\train_folds.csv")
-#print(TRAINING_DATA)
-TEST_DATA = os.path.join(os.getcwd(), "input\\test_YCcRUnU.csv")
-
+#Output paths
 MODEL_OUTPUT = os.path.join(os.getcwd(), "models")
+
+#Input details
+TARGET_COL = ["Response"]
+PROBLEM_TYPE = "binary_classification"
